@@ -21,7 +21,7 @@ libraries, Java tools, and so on to complete the exam, including re-using code
 from class notes.
 
 You can review the grading policy for exams in the [syllabus](/syllabus.html).
-You will complete the programming task below and submit your work to the `exam1` Gradescope assignment.
+You will complete the programming task below and submit your work to the `Exam2` Gradescope assignment.
 
 Submission checklist (see long descriptions below for full details):
 
@@ -34,8 +34,8 @@ In the `ExamplesArrays` class, you will use the design recipe to write several m
 - `averageWithoutLowest` – takes an array of doubles and returns the average
 (mean) of them, _leaving out_ the lowest number. So, for example, the average of
 `1`, `2`, and `3` according to this scheme is `2.5`. If there are no elements to
-average, the method should return `0`. If there is a tie, leave out only a
-single one of the tied numbers.
+average, the method should return `0`. If there is a tie for the lowest, leave out only a
+single one of the tied lowest numbers.
 - `sumOfPairs` – write a class called `Pair` with the usual field-initializing
 constructor and two `int` fields called `a` and `b` outside the `ExamplesArrays`
 class. `sumOfPairs` should take an array of `Pair` and return an array of `int`,
