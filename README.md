@@ -31,7 +31,7 @@ Submission checklist (see long descriptions below for full details):
 
 In the `ExamplesArrays` class, you will use the design recipe to write several methods.
 
-- `averageWithoutLowest` – takes an array of numbers and returns the average
+- `averageWithoutLowest` – takes an array of doubles and returns the average
 (mean) of them, _leaving out_ the lowest number. So, for example, the average of
 `1`, `2`, and `3` according to this scheme is `2.5`. If there are no elements to
 average, the method should return `0`. If there is a tie, leave out only a
@@ -48,6 +48,25 @@ array of those `Region`s in the input that contain the given `Point`.
 There are no specific test requirements for these methods other than the one
 listed in the video below; we will test them to ensure they are correct and you
 should test them thoroughly enough to be confident in their correctness.
+
+Here are some tests to get you started that you can use as you like (and to help make sure we agree on how these methods work).
+
+```
+	void testAverageWithoutLowest(Tester t) {
+		double[] unique = {1.0,2.0,3.0};
+		t.checkExpect(averageWithoutLowest(unique), 2.5);
+	};
+	void testRegionsWithPoint(Tester t) {
+		Region[] regions = {new CircleRegion(new Point(0, 0), 5), new CircleRegion(new Point(0, 0), 10)};
+		Region[] result = {new CircleRegion(new Point(0, 0), 10)};
+		t.checkExpect(regionsWithPoint(regions, new Point(9, 0)), result);
+	};
+	void testSumOfPairs(Tester t) {
+		Pair[] pairs = {new Pair(1, 2), new Pair(3, 4)};
+		int[] result = {3, 7};
+		t.checkExpect(sumOfPairs(pairs), result);
+	};
+```
 
 ## Task 2 – Interfaces
 
