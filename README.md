@@ -140,7 +140,7 @@ won't grade it, but it helps us know what happened if something goes wrong).
 
 ## Video Task
 
-You will record a short video of no more than 5 minutes. Include:
+You will record a short video of no more than 6 minutes. Include:
 
 - Show only your face and a picture ID (your student ID is preferred but any
 picture ID with your name on it will work) for a few seconds at the beginning.
