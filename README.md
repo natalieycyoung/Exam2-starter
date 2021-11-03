@@ -92,7 +92,6 @@ should work):
 class ExamplesTweets {
   User joe = new User("joepolitz", "Joe Gibbs Politz");
   User greg = new User("gregory_miranda", "Greg Miranda");
-  User rachel = new User("Rachel__Lim", "Rachel Lim");
   Tweet t1 = new TextTweet(this.joe, "Java 17 has a cool feature called records", 77);
   Tweet t2 = new ReplyTweet(this.greg, "Hmm I wonder if we could use it for CSE11", 12, this.t1);
 
