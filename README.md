@@ -25,6 +25,11 @@ You will complete the programming task below and submit your work to the `Exam2`
 
 Submission checklist (see long descriptions below for full details):
 
+- `Tweets.java`
+- `ExamplesArrays.java`
+- `Region.java`
+- `WordFilter.java`
+- `video.*` (`*` means whatever extension you have; we *really* prefer `mp4`, which is what Zoom produces. If you use an extension other than mp4, check that it plays in Gradescope!)
 
 
 ## Task 1 – Arrays
