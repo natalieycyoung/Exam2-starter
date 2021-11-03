@@ -211,10 +211,10 @@ stack in a comment, where in each line you indicate:
     boolean ans2 = this.d3.m();
     /*
 
-    class	method	reference	return value
-    C		  m	      :2        false
+    class	method	reference   return value
+    C		  m	  :2        false
     D		  m       :4        true
-    D		  m	      :6        false
+    D		  m	  :6        false
     */
   }
   $ ./run Examples
