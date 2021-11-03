@@ -238,6 +238,10 @@ stack in a comment, where in each line you indicate:
   No test methods found.
   ```
 
+## Study
 
+We are conducting a study related to remote exams. The details are embedded below; if you choose not to opt out your exam submission may be used as part of a research project.
+
+<iframe src="https://drive.google.com/file/d/1U6naucU4rT5tmes2saYRsmghToH7VgGD/preview" width="640" height="480" allow="autoplay"></iframe>
 
 
