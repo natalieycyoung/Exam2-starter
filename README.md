@@ -66,6 +66,28 @@ There are no specific test requirements for these methods other than the one
 listed in the video below; we will test them to ensure they are correct and you
 should test them thoroughly enough to be confident in their correctness.
 
+Here are a few tests to get you started (and make sure we all agree how this
+should work):
+
+```
+class ExamplesTweets {
+  User joe = new User("joepolitz", "Joe Gibbs Politz");
+  User greg = new User("gregory_miranda", "Greg Miranda");
+  User rachel = new User("Rachel__Lim", "Rachel Lim");
+  Tweet t1 = new TextTweet(this.joe, "Java 17 has a cool feature called records", 77);
+  Tweet t2 = new ReplyTweet(this.greg, "Hmm I wonder if we could use it for CSE11", 12, this.t1);
+
+  void testLongestTweetInThread(Tester t) {
+    t.checkExpect(this.t2.lengthOfLongestTweetInThread(), 41);
+  }
+
+  void testAuthorPostedInThread(Tester t) {
+    t.checkExpect(this.t1.timesAuthorPostedInThread(joe), 1);
+    t.checkExpect(this.t1.timesAuthorPostedInThread(greg), 0);
+  }
+}
+```
+
 ## Task 3 – Main and Command-Line Arguments
 
 Your task is to write a program `WordFilter.java` that has a WordFilter method
