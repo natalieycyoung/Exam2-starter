@@ -31,6 +31,9 @@ Submission checklist (see long descriptions below for full details):
 - `WordFilter.java`
 - `video.*` (`*` means whatever extension you have; we *really* prefer `mp4`, which is what Zoom produces. If you use an extension other than mp4, check that it plays in Gradescope!)
 
+Make sure to look at your Gradescope submission after submitting to see if all the required files are there.
+
+If you have a problem uploading your video to Gradescope, you can upload it here [https://docs.google.com/forms/d/e/1FAIpQLSeK0_OQpd0ufiNqmeh0HlQ6Aci3WUFp8bthczJkfIxeeQxLCA/viewform](https://docs.google.com/forms/d/e/1FAIpQLSeK0_OQpd0ufiNqmeh0HlQ6Aci3WUFp8bthczJkfIxeeQxLCA/viewform). Do this only if, for some reason, you get an error (usually due to file size) when uploading to Gradescope.
 
 ## Task 1 – Arrays
 
