@@ -1,7 +1,7 @@
 // EXAM INSTRUCTIONS:
 // All of your code for Task 2 goes in this file.
 // Add new method headers and implementations as appropriate to these classes
-// Add examples to the ArrayExamples class.
+// Add examples to the ExamplesTweets class.
 
 interface Tweet {
 }
