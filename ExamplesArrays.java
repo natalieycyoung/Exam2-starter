@@ -23,25 +23,23 @@ class ExamplesArrays
 			return average;
 		}
 
-		double lowest = numSet[0];	// lowest initialized to array item
+		double lowest = numSet[0];	// initialize lowest to array item
 		int lowestIndex = 0;
 		double sum = 0;
 
-		for (int i = 0; i < numSet.length; i++)
+		for (int i = 0; i < numSet.length; i++)	// finds lowest and its index
 		{
 			if (numSet[i] < lowest)	// ensures exclusion of only one lowest
 			{
-//System.out.println("within if(numSet[i] < lowest)");
 				lowest = numSet[i];
-//System.out.println("current index: " + i);
+				
 				lowestIndex = i;
-//System.out.println("lowestIndex: " + lowestIndex);
 			}
 		}
 		
-		for (int i = 0; i < numSet.length; i++)
+		for (int i = 0; i < numSet.length; i++)	// populates new array without lowest
 		{
-			if (i != lowestIndex)	// adds array value to sum if not lowest
+			if (i != lowestIndex)	// adds element value to sum if not lowest
 			{
 				sum += numSet[i];
 			}
@@ -65,10 +63,7 @@ class ExamplesArrays
 
 		for (int i = 0; i < pairs.length; i++)
 		{
-//System.out.println("pairs[" + i + "].a: " + pairs[i].a);
-//System.out.println("pairs[" + i + "].b: " + pairs[i].b);
-			sums[i] = pairs[i].a + pairs[i].b;
-//System.out.println("sums[" + i + "]: " + sums[i]);
+			sums[i] = pairs[i].a + pairs[i].b;	// sums up pairs, assigns to int array
 		}
 
 		return sums;
@@ -86,6 +81,7 @@ class ExamplesArrays
 	{
 		int regCount = 0;
 
+		// finds how many regions contain point
 		for (int regIndex = 0; regIndex < regions.length; regIndex++)
 		{
 			if (regions[regIndex].contains(point))
@@ -94,9 +90,11 @@ class ExamplesArrays
 			}
 		}
 
-		Region[] regionsWithPoint = new Region[regCount];
+		Region[] regionsWithPoint = new Region[regCount];	// create new array to hold
+															// abovementioned regions
 		int regWithIndex = 0;
 
+		// adds regions containing point to array
 		for (int regIndex = 0; regIndex < regions.length; regIndex++)
 		{
 			if (regions[regIndex].contains(point))
