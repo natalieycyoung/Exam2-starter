@@ -7,8 +7,6 @@ class ExamplesArrays
 {
 	ExamplesArrays() {}
 
-//	double lowest;	//put in avg method to make local after testing complete
-
 	/**
 	 * Takes an array of doubles and returns the average of the set without the
 	 * lowest number
@@ -20,19 +18,17 @@ class ExamplesArrays
 	{
 		double average = 0;
 
-		if (numSet.length < 1)
+		if (numSet.length < 1)	// returns 0 if no elements to average
 		{
 			return average;
 		}
 
-		double lowest = numSet[0];
+		double lowest = numSet[0];	// lowest initialized to array item
 		int lowestIndex = 0;
 		double sum = 0;
 
 		for (int i = 0; i < numSet.length; i++)
 		{
-//System.out.println("numSet[" + i + "]: " + numSet[i]);
-//System.out.println("lowestIndex: " + lowestIndex);
 			if (numSet[i] < lowest)	// ensures exclusion of only one lowest
 			{
 //System.out.println("within if(numSet[i] < lowest)");
@@ -114,6 +110,27 @@ class ExamplesArrays
 	}
 
 
+	// TESTS
+	void testAverageWithoutLowest(Tester t)
+	{
+		double[] unique = {1.0, 2.0, 3.0};
+		t.checkExpect(averageWithoutLowest(unique), 2.5);
+	};
+
+	void testRegionsWithPoint(Tester t)
+	{
+		Region[] regions = {new CircleRegion(new Point(0, 0), 5),
+			new CircleRegion(new Point(0, 0), 10)};
+		Region[] result = {new CircleRegion(new Point(0, 0), 10)};
+		t.checkExpect(regionsWithPoint(regions, new Point(9, 0)), result);
+	};
+
+	void testSumOfPairs(Tester t)
+	{
+		Pair[] pairs = {new Pair(1, 2), new Pair(3, 4)};
+		int[] result = {3, 7};
+		t.checkExpect(sumOfPairs(pairs), result);
+	};
 /*
 	// TEST
 	public static void main(String[] args)
@@ -175,24 +192,5 @@ class Pair
 
 class ProvidedExamples
 {
-	void testAverageWithoutLowest(Tester t)
-	{
-		double[] unique = {1.0, 2.0, 3.0};
-		t.checkExpect(averageWithoutLowest(unique), 2.5);
-	};
 
-	void testRegionsWithPoint(Tester t)
-	{
-		Region[] regions = {new CircleRegion(new Point(0, 0), 5),
-			new CircleRegion(new Point(0, 0), 10)};
-		Region[] result = {new CircleRegion(new Point(0, 0), 10)};
-		t.checkExpect(regionsWithPoint(regions, new Point(9, 0)), result);
-	};
-
-	void testSumOfPairs(Tester t)
-	{
-		Pair[] pairs = {new Pair(1, 2), new Pair(3, 4)};
-		int[] result = {3, 7};
-		t.checkExpect(sumOfPairs(pairs), result);
-	};
 }
