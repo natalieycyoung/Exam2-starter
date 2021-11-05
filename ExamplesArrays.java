@@ -1,6 +1,7 @@
 // EXAM INSTRUCTIONS:
 // All of your code for Task 1 goes in this file.
 
+import tester.*;
 
 class ExamplesArrays
 {
@@ -112,11 +113,6 @@ class ExamplesArrays
 		return regionsWithPoint;
 	}
 
-	void testAverageWithoutLowest(Tester t)
-	{
-		double[] unique = {1.0, 2.0, 3.0};
-		t.checkExpect(averageWithoutLowest(unique), 2.5);
-	};
 
 /*
 	// TEST
@@ -175,4 +171,28 @@ class Pair
 		this.a = a;
 		this.b = b;
 	}
+}
+
+class ProvidedExamples
+{
+	void testAverageWithoutLowest(Tester t)
+	{
+		double[] unique = {1.0, 2.0, 3.0};
+		t.checkExpect(averageWithoutLowest(unique), 2.5);
+	};
+
+	void testRegionsWithPoint(Tester t)
+	{
+		Region[] regions = {new CircleRegion(new Point(0, 0), 5),
+			new CircleRegion(new Point(0, 0), 10)};
+		Region[] result = {new CircleRegion(new Point(0, 0), 10)};
+		t.checkExpect(regionsWithPoint(regions, new Point(9, 0)), result);
+	};
+
+	void testSumOfPairs(Tester t)
+	{
+		Pair[] pairs = {new Pair(1, 2), new Pair(3, 4)};
+		int[] result = {3, 7};
+		t.checkExpect(sumOfPairs(pairs), result);
+	};
 }
