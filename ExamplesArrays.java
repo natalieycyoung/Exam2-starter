@@ -62,16 +62,19 @@ class ExamplesArrays
 	 * @param pairs
 	 * @return sums
 	 */
-	int sumOfPairs(Pair[] pairs)
+	int[] sumOfPairs(Pair[] pairs)
 	{
 		int[] sums = new int[pairs.length];
 
 		for (int i = 0; i < pairs.length; i++)
 		{
-System.out.println("pairs[" + i + "]: " + pairs[i]);
+System.out.println("pairs[" + i + "].a: " + pairs[i].a);
+System.out.println("pairs[" + i + "].b: " + pairs[i].b);
 			sums[i] = pairs[i].a + pairs[i].b;
 System.out.println("sums[" + i + "]: " + sums[i]);
 		}
+
+		return sums;
 	}
 
 	// TEST
@@ -88,11 +91,12 @@ System.out.println("sums[" + i + "]: " + sums[i]);
 		System.out.println("avg: " + avg);
 		System.out.println("lowest: " + averageTest.lowest);
 */
-		Pair pair1 = new Pair(1,1);
-		Pair pair2 = new Pair(2,2);
-		Pair pair3 = new Pair(3,3);
-		Pair[] exPairs = {pair1, pair2, pair3};
-		int[] intsArray = sumOfPairs(exPairs);
+		ExamplesArrays test = new ExamplesArrays();
+		Pair pair1 = new Pair(1,2);
+		Pair pair2 = new Pair(3,4);
+//		Pair pair3 = new Pair(3,3);
+		Pair[] exPairs = {pair1, pair2};
+		int[] intsArray = test.sumOfPairs(exPairs);
 for (int i = 0; i < intsArray.length; i++)
 {
 	System.out.println("intsArray[" + i + "]: " + intsArray[i]);
