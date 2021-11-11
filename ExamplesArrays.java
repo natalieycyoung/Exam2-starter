@@ -37,6 +37,13 @@ class ExamplesArrays
 			}
 		}
 		
+/*
+i start   i end   sum start   sum end
+      	                  
+                         		
+                         
+*/
+
 		for (int i = 0; i < numSet.length; i++)	// populates new array without lowest
 		{
 			if (i != lowestIndex)	// adds element value to sum if not lowest
@@ -109,11 +116,23 @@ class ExamplesArrays
 
 
 	// TESTS
+	//
+	
+
+	ExamplesArrays test = new ExamplesArrays();
+
 	void testAverageWithoutLowest(Tester t)
 	{
 		double[] unique = {1.0, 2.0, 3.0};
 		t.checkExpect(averageWithoutLowest(unique), 2.5);
 	};
+
+	void testAverageWithoutLowest(Tester t)
+	{
+		double[] unique = {2.0, 1.0, 3.0, 2.0};
+		t.checkExpect(averageWithoutLowest(unique), 3.5);
+	};
+
 
 	void testRegionsWithPoint(Tester t)
 	{
@@ -186,9 +205,4 @@ class Pair
 		this.a = a;
 		this.b = b;
 	}
-}
-
-class ProvidedExamples
-{
-
 }
